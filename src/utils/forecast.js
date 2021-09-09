@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
     } else if(response.body.error)  {
         callback('Unable to connect to the location', undefined);
     } else {
-        callback(undefined,response.body.current);
+        callback(undefined,`Hi Everyone, This is ${response.body.current.weather_descriptions}`);
     }
   });
 };
